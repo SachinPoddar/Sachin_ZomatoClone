@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-section {
+            background-image: url(https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 100px 20px 40px;
+            font-family: fantasy;
+            color: white;
+        }
+
+        .top-section .header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: flex-start;
+        }
+
+        .top-section .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .top-section .title {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .top-section .search-container {
+            display: flex;
+            gap: 10px;
+            border: 2px solid white;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .search-container select,
+        .search-container input {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .search-container input {
+            padding-right: 120px;
+        }
+
+        .bottom-section {
+            background-color: #ccc;
+            padding: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .bottom-section .container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .bottom-section .box img {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            border: 2px solid;
+            border-radius: 15px;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+            flex-wrap: wrap;
+        }
+
+        .bottom-section .box img:hover {
+            transform: scale(1.1); /* Scale up the image on hover */
+        }
+
+        .bottom-section .description {
+            margin-top: 10px;
+            font-size: 17px;
+            font-family: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
+            color: rgb(56, 55, 55);
+            text-align: left;
+            padding-left: 50px;
+        }
+
+        .collections {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #ccc;
+        }
+
+        .collections h1 {
+            margin: 0;
+            padding-right: 990px;
+            font-family: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
+        }
+
+        .bottom-sections {
+            background-color: #ccc;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .bottom-sections .container1 {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 22%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .bottom-sections .box {
+            position: relative;
+        }
+
+        .bottom-sections .box img {
+            width: 100%;
+            max-width: 300px;
+            height: 250px;
+            border: 2px solid;
+            border-radius: 15px;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .bottom-sections .box img:hover {
+            transform: scale(1.1); /* Scale up the image on hover */
+        }
+
+        .bottom-sections .box p {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            margin: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px 0;
+            border-radius: 20px;
+        }
+
+        .collections span {
+            display: inline-flex;
+            margin-top: 10px;
+        }
+
+        .Popular {
+            margin: 0px;
+            padding: 0%;
+            margin-left: 90px;
+            height: 400px;
+        }
+
+        .Popular .container2 {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .ind, .kor, .yal, .whi, .jp, .jai, .sar, .hsr, .mar {
+            width: 200px;
+            height: 55px;
+            text-align: left;
+            padding-left: 10px;
+            border: 2px solid black;
+            margin: 10px;
+            border-radius: 20px;
+            border-style: groove;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 10px; /* Add padding to the right */
+        }
+
+        .ind i, .kor i, .yal i, .whi i, .jp i, .jai i, .sar i, .hsr i, .mar i {
+            margin-left: auto; /* Ensure the icon is pushed to the right */
+        }
+        .ind:hover, .kor:hover, .yal:hover, .whi:hover, .jp:hover, .jai:hover, .sar:hover, .hsr:hover, .mar:hover{
+            transform: scale(1.07);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-section">
+            <div class="header">
+                <span>Get App</span>
+                <div class="buttons">
+                    <a href="project_Login.html"><span>Login</span></a>
+                    <span>Sign up</span>
+                    <span>Add Restaurant</span>
+                </div>
+            </div>
+            <img id="pic" src="https://media.licdn.com/dms/image/D5612AQEpzGuf4uukMQ/article-cover_image-shrink_600_2000/0/1712377685818?e=2147483647&v=beta&t=a4i57rxAPPa46-j6g7PuzLpGObx8EqYSzt3Qayiotds" width="200px" height="200px" alt="">
+            <p class="title">Discover the best food & Drinks in Bengaluru</p>
+            <div class="search-container">
+                <select id="location-filter" class="location-filter">
+                    <option value="" style="font-family: Georgia, 'Times New Roman', Times, serif;">Locations</option>
+                    <option value="bengaluru">Bengaluru</option>
+                    <option value="mysore">Mysore</option>
+                    <option value="vijayapura">Vijayapura</option>
+                    <option value="dharwad">Dharwad</option>
+                    <option value="hubli">Hubli</option>
+                </select>
+                <input type="text" id="search-box" class="search-box" placeholder="Search for restaurants...">
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="container">
+                <div class="box">
+                    <img src="https://franchiseindia.s3.ap-south-1.amazonaws.com/uploads/content/fi/art/5feb2c2f49aff.jpeg" alt="Order Food">
+                </div>
+                <div class="description">
+                    <span>Order Food</span> <br>
+                    <p>Stay home and order to your doorstep</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="box">
+                    <img src="https://i0.wp.com/stanzaliving.wpcomstaging.com/wp-content/uploads/2024/05/93aef-restaurants-in-koramangala.jpg?fit=1000%2C667&ssl=1" alt="Dining">
+                </div>
+                <div class="description">
+                    <span>Dining</span> <br>
+                    <p>View the city's favorite dining venue</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="box">
+                    <img src="https://nextrestaurants.com/wp-content/uploads/2018/09/Restaurant-Nightlife-Scene-Tips.png" alt="Nightlife">
+                </div>
+                <div class="description">
+                    <span>Nightlife & Club</span> <br>
+                    <p>Explore the city's top Nightlife outlets</p>
+                </div>
+            </div>
+        </div>
+        <div class="collections">
+            <h1>Collections</h1>
+            <span style="margin-right: 300px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; flex-wrap: wrap;">Explore curated lists of top restaurants, cafes, pubs, and bars in Bengaluru, based on trends</span>
+            <span style=" font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; flex-wrap: wrap;">All collections in Bengaluru</span>
+        </div>
+        <div class="bottom-sections">
+            <div class="container1">
+                <div class="box">
+                    <img src="https://b.zmtcdn.com/data/collections/9b9ae12bef034bfc3b56031201f56eb0_1711107845.png" alt="Live Screening">
+                    <p>Best of live Screening</p>
+                </div>
+            </div>
+            <div class="container1">
+                <div class="box">
+                    <img src="https://b.zmtcdn.com/data/collections/684397cd092de6a98862220e8cc40aca_1709810207.png" alt="top Trending">
+                    <p>Top Trending</p>
+                </div>
+            </div>
+            <div class="container1">
+                <div class="box">
+                    <img src="https://b.zmtcdn.com/data/collections/deb8ca39b2ddc9587b1463c49fca528f_1697109433.png?fit=around|562.5:360&crop=562.5:360;*,*" alt="Newly Opened">
+                    <p>Newly Opened</p>
+                </div>
+            </div>
+            <div class="container1">
+                <div class="box">
+                    <img src="https://media.timeout.com/images/105940814/750/422/image.jpg" alt="Best RoofTop">
+                    <p>Best Rooftop</p>
+                </div>
+            </div>
+            <br><br>
+            <div class="Popular">
+                <h1>Popular localities in around Bengaluru</h1>
+                <div class="container2">
+                    <div class="ind">
+                        <p>Indirnagar</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="kor">
+                        <p>Kormangala</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="yal">
+                        <p>Yalhenka</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="whi">
+                        <p>Whitefield</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="whi">
+                        <p>Whitefield</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="mar">
+                        <p>Martahalli</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="hsr">
+                        <p>HSR</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="jai">
+                        <p>Jayanagar</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="sar">
+                        <p>Sarjapur Road</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="jp">
+                        <p>JP Nagar</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
